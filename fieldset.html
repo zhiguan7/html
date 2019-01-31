@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<!-- 
+	<form method="post" action="http://www.baidu.com">
+		<fieldset>
+			<legend>Title</legend>
+			用户名：<input type="text" name="1"> <br/>
+			&nbsp&nbsp 密码：<input type="password" name="2"> <br/>
+			<input type="submit" name="3" formmethod="get">
+		</fieldset>
+	</form> -->
+
+	<br/><br/><br/><br/>
+
+	<form oninput="num.value = parseInt(num1.value) + parseInt(num2.value)">
+		<input type="number" id="num1">&nbsp+
+		<input type="number" id="num2">&nbsp=
+		<output name="num" for="num1 num2"></output>
+	</form>
+
+	<!-- <progress value="10" max="100">  -->   <!-- 不可与meter同用 --> <!-- 通常用于任务进度条 -->
+	<br/>
+	<meter max="" min="" value="0.1" optimum="0.1" low="0.2"></meter>
+	<meter max="" min="" value="0.5" optimum="0.1"></meter>
+	<meter max="" min="" value="0.8" optimum="0.1" high="0.7"></meter>    <!-- max默认为1，min默认为0 --> <!-- 通常用于表示某种量的大小 -->
+	<br/>
+
+	<form>
+		<details>
+			<summary>Title</summary>
+			&nbsp&nbspNumber:<input type="text" name="id" pattern="[0-9]{10}"> <!-- pattern是规定输入格式 -->
+			Password:<input type="password" name="password"> 
+			<input type="submit" name="send"> <keygen name="security"> <!-- 加密 (弃用)--> 
+		</details>
+	</form>
+
+</body>
+</html>
