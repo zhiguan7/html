@@ -1,0 +1,37 @@
+<html>
+<head>
+<script type="text/javascript">
+function validate_email(field,alerttxt){ // field 字段
+	with (field){ //with（a）为括号内的变量都是a的
+		apos=value.indexOf("@") //寻找字符串最开始出现的位置，返回位置，无则返回-1
+		dotpos=value.lastIndexOf(".") //寻找字符串最后出现的位置，返回位置，无则返回-1
+		if (apos<1||dotpos-apos<2) {
+			alert(alerttxt);return false}
+		else {
+			return true}
+	}
+}
+
+	var c = ["Google" , "Alex" , "Ecip"]; //不能用 {"Google" , "Alex" , "Ecip"}
+	//var c = new Array("Google" , "Alex" , "Ecip"); //或者使用这种形式
+	console.log(c); //在控制台打出c
+
+function validate_form(thisform){
+	with (thisform){
+	if (validate_email(email,"Not a valid e-mail address!")==false){
+	  	email.focus(); //获取焦点
+	  	return false
+	 	}
+	}
+}
+</script>
+</head>
+
+<body>
+	<form action="submitpage.htm" onsubmit="return validate_form(this);" method="post"> <!-- onsubmit当提交表单时执行一段 JavaScript -->
+		Email: <input type="text" name="email" size="30">
+		<input type="submit" value="Submit"> 
+	</form>
+</body>
+
+</html>
